@@ -672,7 +672,7 @@ public final class BuilderProcess extends BaritoneProcessHelper implements IBuil
 
     private void fullRecalc(BuilderCalculationContext bcc) {
         incorrectPositions = new HashSet<>();
-        for (int y = 0; y < schematic.heightY(); y++) {
+        for (int y = schematic.heightY() - 1; y >= 0; y--) {
             for (int z = 0; z < schematic.lengthZ(); z++) {
                 for (int x = 0; x < schematic.widthX(); x++) {
                     int blockX = x + origin.getX();
